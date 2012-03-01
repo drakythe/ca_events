@@ -10,16 +10,6 @@ include_once('ca_events.features.inc');
  * Implements hook_menu()
  */
 function ca_events_menu() {
-/**  $items['admin/config/worx_features'] = array(
-    'title' => 'Worx Features',
-    'description' => 'Configure Worx Features',
-    'position' => 'right',
-    'weight' => -20,
-    'page callback' => 'system_admin_menu_block_page',
-    'access arguments' => array('access administration pages'),
-    'file' => 'system.admin.inc',
-    'file path' => drupal_get_path('module', 'system'),
-  );*/
   $items['admin/config/worx_features/events'] = array(
     'title' => 'Events Configuration',
     'description' => 'Override settings for ca_events',
@@ -55,11 +45,7 @@ function ca_events_menu_alter(&$items) {
  * Implements hook_panels_pre_render().
  */
 function ca_events_panels_pre_render($panel, $renderer) {
-  global $user;
-  if($user->uid == 1) {
-    print_r($panel);
-  }
-  if (isset($panel->content['2']) && $panel->content['2']->subtype == 'ca_events-events_calendar') {
+  if (isset($panel->content['new-6']) && $panel->content['new-6']->subtype == 'ca_events-events_calendar') {
     $panel->title = variable_get('ca_events_panel_title', 'Events');
   }
 }
