@@ -24,6 +24,13 @@ function ca_events_settings_form() {
     '#required' => TRUE,
     '#description' => t('What would you like the menu title to be?'),
   );
+  $form['ca_events_panel_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Panel Title'),
+    '#default_value' => variable_get('ca_events_panel_title', 'Events'),
+    '#required' => TRUE,
+    '#description' => t('What would you like the panel title to be?'),
+  );
   
   return system_settings_form($form);
 }

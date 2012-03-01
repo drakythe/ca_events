@@ -50,3 +50,16 @@ function ca_events_menu() {
 function ca_events_menu_alter(&$items) {
   $items['events']['title'] = variable_get('ca_events_menu_title', 'Events');
 }
+
+/**
+ * Implements hook_panels_pre_render().
+ */
+function ca_events_panels_pre_render($panel, $renderer) {
+  global $user;
+  if($user->uid == 1) {
+    print_r($panel);
+  }
+  if (isset($panel->content['2']) && $panel->content['2']->subtype == 'ca_events-events_calendar') {
+    $panel->title = variable_get('ca_events_panel_title', 'Events');
+  }
+}
