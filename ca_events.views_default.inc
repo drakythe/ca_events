@@ -506,6 +506,29 @@ function ca_events_views_default_views() {
     'trim_length' => '700',
   );
   $handler->display->display_options['fields']['body']['field_api_classes'] = 0;
+  /* Field: Content: AddToAny link */
+  $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
+  $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['label'] = '';
+  $handler->display->display_options['fields']['addtoany_link']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['element_class'] = 'ca-addtoany-feature';
+  $handler->display->display_options['fields']['addtoany_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['addtoany_link']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['addtoany_link']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['hide_alter_empty'] = 1;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -676,6 +699,51 @@ function ca_events_views_default_views() {
     'trim_length' => '125',
   );
   $handler->display->display_options['fields']['body']['field_api_classes'] = 0;
+  /* Field: Content: AddToAny link */
+  $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
+  $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['label'] = '';
+  $handler->display->display_options['fields']['addtoany_link']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['element_class'] = 'ca-addtoany-feature';
+  $handler->display->display_options['fields']['addtoany_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['addtoany_link']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['addtoany_link']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['addtoany_link']['hide_alter_empty'] = 1;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['nothing']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['nothing']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['nothing']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['nothing']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['nothing']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['nothing']['hide_alter_empty'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Date -  start date (field_ca_events_date) */
   $handler->display->display_options['sorts']['field_ca_events_date_value']['id'] = 'field_ca_events_date_value';
