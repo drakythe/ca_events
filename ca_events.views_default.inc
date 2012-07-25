@@ -506,7 +506,7 @@ function ca_events_views_default_views() {
     'trim_length' => '700',
   );
   $handler->display->display_options['fields']['body']['field_api_classes'] = 0;
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -699,7 +699,7 @@ function ca_events_views_default_views() {
     'trim_length' => '125',
   );
   $handler->display->display_options['fields']['body']['field_api_classes'] = 0;
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';

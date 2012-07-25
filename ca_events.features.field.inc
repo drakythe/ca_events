@@ -10,68 +10,7 @@
 function ca_events_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'comment-comment_node_ca_event-comment_body'
-  $fields['comment-comment_node_ca_event-comment_body'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(
-        0 => 'comment',
-      ),
-      'field_name' => 'comment_body',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'module' => 'text',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'text_long',
-    ),
-    'field_instance' => array(
-      'bundle' => 'comment_node_ca_event',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'comment',
-      'field_name' => 'comment_body',
-      'label' => 'Comment',
-      'required' => TRUE,
-      'settings' => array(
-        'text_processing' => 1,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'module' => 'text',
-        'settings' => array(
-          'rows' => 5,
-        ),
-        'type' => 'text_textarea',
-        'weight' => 0,
-      ),
-    ),
-  );
-
-  // Exported field: 'node-ca_event-body'
+  // Exported field: 'node-ca_event-body'.
   $fields['node-ca_event-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -94,6 +33,7 @@ function ca_events_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -145,18 +85,21 @@ function ca_events_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ca_event-field_ca_events_date'
+  // Exported field: 'node-ca_event-field_ca_events_date'.
   $fields['node-ca_event-field_ca_events_date'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_ca_events_date',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'date',
       'settings' => array(
+        'cache_count' => '4',
+        'cache_enabled' => 0,
         'granularity' => array(
           'day' => 'day',
           'hour' => 'hour',
@@ -165,6 +108,7 @@ function ca_events_field_default_fields() {
           'second' => 0,
           'year' => 'year',
         ),
+        'repeat' => '1',
         'timezone_db' => 'UTC',
         'todate' => 'optional',
         'tz_handling' => 'site',
@@ -178,17 +122,18 @@ function ca_events_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'inline',
+          'label' => 'above',
           'module' => 'date',
           'settings' => array(
-            'format_type' => 'short',
+            'format_type' => 'long',
             'fromto' => 'both',
             'multiple_from' => '',
             'multiple_number' => '',
             'multiple_to' => '',
+            'show_repeat_rule' => 'show',
           ),
           'type' => 'date_default',
-          'weight' => '1',
+          'weight' => 3,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -212,20 +157,22 @@ function ca_events_field_default_fields() {
         'active' => 1,
         'module' => 'date',
         'settings' => array(
+          'display_all_day' => 0,
           'increment' => '15',
-          'input_format' => 'M j Y - H:i:s',
+          'input_format' => 'j M Y - g:i:sa',
           'input_format_custom' => '',
           'label_position' => 'above',
+          'repeat_collapsed' => 1,
           'text_parts' => array(),
           'year_range' => '-3:+3',
         ),
-        'type' => 'date_select',
+        'type' => 'date_popup',
         'weight' => '2',
       ),
     ),
   );
 
-  // Exported field: 'node-ca_event-field_ca_events_image'
+  // Exported field: 'node-ca_event-field_ca_events_image'.
   $fields['node-ca_event-field_ca_events_image'] = array(
     'field_config' => array(
       'active' => '1',
@@ -246,6 +193,7 @@ function ca_events_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -282,6 +230,7 @@ function ca_events_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '10 MB',
@@ -306,7 +255,6 @@ function ca_events_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Comment');
   t('Date');
   t('Image');
 
