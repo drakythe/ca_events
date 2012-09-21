@@ -332,7 +332,7 @@ function ca_events_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'ca_events-panel_pane_2';
@@ -347,10 +347,10 @@ function ca_events_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = '';
-    $display->content['new-6'] = $pane;
-    $display->panels['middle'][0] = 'new-6';
+    $display->content['new-1'] = $pane;
+    $display->panels['middle'][0] = 'new-1';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-6';
+  $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_events_admin'] = $page;
@@ -415,7 +415,7 @@ function ca_events_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'ca_events-panel_pane_1';
@@ -430,10 +430,10 @@ function ca_events_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = '';
-    $display->content['new-7'] = $pane;
-    $display->panels['middle'][0] = 'new-7';
+    $display->content['new-2'] = $pane;
+    $display->panels['middle'][0] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-7';
+  $display->title_pane = 'new-2';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_events_calendar_view'] = $page;
