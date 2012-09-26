@@ -58,7 +58,7 @@ function ca_events_default_page_manager_handlers() {
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_events-panel_pane_4';
+    $pane->subtype = 'ca_events-ca_event_node_view_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -67,12 +67,12 @@ function ca_events_default_page_manager_handlers() {
       'settings' => NULL,
     );
     $pane->css = array(
-      'css_id' => 'event-images',
-      'css_class' => '',
+      'css_id' => '',
+      'css_class' => 'event-images',
     );
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-1'] = $pane;
     $display->panels['middle'][0] = 'new-1';
     $pane = new stdClass();
@@ -179,7 +179,7 @@ function ca_events_default_page_manager_handlers() {
     $display->content['new-5'] = $pane;
     $display->panels['middle'][4] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['ca_events_node_view_panel_context'] = $handler;
 
@@ -418,7 +418,7 @@ function ca_events_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_events-panel_pane_1';
+    $pane->subtype = 'ca_events-ca_event_calendar_view_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -429,11 +429,11 @@ function ca_events_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-2'] = $pane;
     $display->panels['middle'][0] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-2';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_events_calendar_view'] = $page;
