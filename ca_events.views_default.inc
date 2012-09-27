@@ -164,7 +164,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '700',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -466,7 +466,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '125',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -540,6 +540,22 @@ function ca_events_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ca_event' => 'ca_event',
+  );
   $handler->display->display_options['pane_title'] = 'CA Events: Node View Template One';
 
   /* Display: Events RSS Feed */
