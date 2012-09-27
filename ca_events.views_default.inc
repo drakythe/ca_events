@@ -80,7 +80,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['filters']['field_ca_events_date_value']['default_date'] = 'now';
 
   /* Display: CA Events: Calendar View Template One */
-  $handler = $view->new_display('panel_pane', 'CA Events: Calendar View Template One', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'CA Events: Calendar View Template One', 'ca_event_calendar_view_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -101,8 +101,114 @@ function ca_events_views_default_views() {
   $handler->display->display_options['filters']['type']['group'] = 0;
   $handler->display->display_options['pane_title'] = 'CA Events: Calendar View Template One';
 
+  /* Display: CA Events: List View Template One */
+  $handler = $view->new_display('panel_pane', 'CA Events: List View Template One', 'ca_event_list_view_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_ca_events_image']['id'] = 'field_ca_events_image';
+  $handler->display->display_options['fields']['field_ca_events_image']['table'] = 'field_data_field_ca_events_image';
+  $handler->display->display_options['fields']['field_ca_events_image']['field'] = 'field_ca_events_image';
+  $handler->display->display_options['fields']['field_ca_events_image']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_events_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_events_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ca_events_image']['settings'] = array(
+    'image_style' => 'default',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_ca_events_image']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ca_events_image']['delta_offset'] = '0';
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_ca_events_date']['id'] = 'field_ca_events_date';
+  $handler->display->display_options['fields']['field_ca_events_date']['table'] = 'field_data_field_ca_events_date';
+  $handler->display->display_options['fields']['field_ca_events_date']['field'] = 'field_ca_events_date';
+  $handler->display->display_options['fields']['field_ca_events_date']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_events_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_events_date']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '600';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '700',
+  );
+  /* Field: Content: AddToAny link */
+  $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
+  $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['label'] = '';
+  $handler->display->display_options['fields']['addtoany_link']['element_class'] = 'ca-addtoany-feature';
+  $handler->display->display_options['fields']['addtoany_link']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Date -  start date (field_ca_events_date) */
+  $handler->display->display_options['sorts']['field_ca_events_date_value']['id'] = 'field_ca_events_date_value';
+  $handler->display->display_options['sorts']['field_ca_events_date_value']['table'] = 'field_data_field_ca_events_date';
+  $handler->display->display_options['sorts']['field_ca_events_date_value']['field'] = 'field_ca_events_date_value';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ca_event' => 'ca_event',
+  );
+  /* Filter criterion: Content: Date -  start date (field_ca_events_date) */
+  $handler->display->display_options['filters']['field_ca_events_date_value']['id'] = 'field_ca_events_date_value';
+  $handler->display->display_options['filters']['field_ca_events_date_value']['table'] = 'field_data_field_ca_events_date';
+  $handler->display->display_options['filters']['field_ca_events_date_value']['field'] = 'field_ca_events_date_value';
+  $handler->display->display_options['filters']['field_ca_events_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_ca_events_date_value']['granularity'] = 'minute';
+  $handler->display->display_options['filters']['field_ca_events_date_value']['default_date'] = 'now';
+  $handler->display->display_options['pane_title'] = 'CA Events: List View Template One';
+
   /* Display: CA Events: Admin */
-  $handler = $view->new_display('panel_pane', 'CA Events: Admin', 'panel_pane_2');
+  $handler = $view->new_display('panel_pane', 'CA Events: Admin', 'ca_event_admin');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
@@ -295,112 +401,8 @@ function ca_events_views_default_views() {
   $handler->display->display_options['filters']['field_ca_events_date_value']['expose']['identifier'] = 'field_ca_events_date_value';
   $handler->display->display_options['pane_title'] = 'CA Events: Admin';
 
-  /* Display: CA Events: List View Template One */
-  $handler = $view->new_display('panel_pane', 'CA Events: List View Template One', 'panel_pane_3');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_ca_events_image']['id'] = 'field_ca_events_image';
-  $handler->display->display_options['fields']['field_ca_events_image']['table'] = 'field_data_field_ca_events_image';
-  $handler->display->display_options['fields']['field_ca_events_image']['field'] = 'field_ca_events_image';
-  $handler->display->display_options['fields']['field_ca_events_image']['label'] = '';
-  $handler->display->display_options['fields']['field_ca_events_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ca_events_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ca_events_image']['settings'] = array(
-    'image_style' => 'default',
-    'image_link' => 'content',
-  );
-  $handler->display->display_options['fields']['field_ca_events_image']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_ca_events_image']['delta_offset'] = '0';
-  /* Field: Content: Date */
-  $handler->display->display_options['fields']['field_ca_events_date']['id'] = 'field_ca_events_date';
-  $handler->display->display_options['fields']['field_ca_events_date']['table'] = 'field_data_field_ca_events_date';
-  $handler->display->display_options['fields']['field_ca_events_date']['field'] = 'field_ca_events_date';
-  $handler->display->display_options['fields']['field_ca_events_date']['label'] = '';
-  $handler->display->display_options['fields']['field_ca_events_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ca_events_date']['settings'] = array(
-    'format_type' => 'short',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-  );
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '600';
-  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '700',
-  );
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
-  $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
-  $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
-  $handler->display->display_options['fields']['addtoany_link']['label'] = '';
-  $handler->display->display_options['fields']['addtoany_link']['element_class'] = 'ca-addtoany-feature';
-  $handler->display->display_options['fields']['addtoany_link']['element_label_colon'] = FALSE;
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Date -  start date (field_ca_events_date) */
-  $handler->display->display_options['sorts']['field_ca_events_date_value']['id'] = 'field_ca_events_date_value';
-  $handler->display->display_options['sorts']['field_ca_events_date_value']['table'] = 'field_data_field_ca_events_date';
-  $handler->display->display_options['sorts']['field_ca_events_date_value']['field'] = 'field_ca_events_date_value';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 0;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'ca_event' => 'ca_event',
-  );
-  /* Filter criterion: Content: Date -  start date (field_ca_events_date) */
-  $handler->display->display_options['filters']['field_ca_events_date_value']['id'] = 'field_ca_events_date_value';
-  $handler->display->display_options['filters']['field_ca_events_date_value']['table'] = 'field_data_field_ca_events_date';
-  $handler->display->display_options['filters']['field_ca_events_date_value']['field'] = 'field_ca_events_date_value';
-  $handler->display->display_options['filters']['field_ca_events_date_value']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_ca_events_date_value']['granularity'] = 'minute';
-  $handler->display->display_options['filters']['field_ca_events_date_value']['default_date'] = 'now';
-  $handler->display->display_options['pane_title'] = 'CA Events: List View Template One';
-
   /* Display: CA Events: Upcoming Block */
-  $handler = $view->new_display('block', 'CA Events: Upcoming Block', 'block_1');
+  $handler = $view->new_display('block', 'CA Events: Upcoming Block', 'ca_event_block_view_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -420,6 +422,8 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_ca_events_image']['id'] = 'field_ca_events_image';
   $handler->display->display_options['fields']['field_ca_events_image']['table'] = 'field_data_field_ca_events_image';
@@ -438,6 +442,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['field_ca_events_date']['table'] = 'field_data_field_ca_events_date';
   $handler->display->display_options['fields']['field_ca_events_date']['field'] = 'field_ca_events_date';
   $handler->display->display_options['fields']['field_ca_events_date']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_events_date']['element_type'] = 'strong';
   $handler->display->display_options['fields']['field_ca_events_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ca_events_date']['settings'] = array(
     'format_type' => 'short',
@@ -445,7 +450,9 @@ function ca_events_views_default_views() {
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
+    'show_repeat_rule' => 'show',
   );
+  $handler->display->display_options['fields']['field_ca_events_date']['delta_offset'] = '0';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -459,7 +466,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '125',
   );
-  /* Field: Broken/missing handler */
+  /* Field: Content: AddToAny link */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -480,7 +487,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['block_description'] = 'CA Events: Upcoming Block';
 
   /* Display: CA Events: Node View Template One */
-  $handler = $view->new_display('panel_pane', 'CA Events: Node View Template One', 'panel_pane_4');
+  $handler = $view->new_display('panel_pane', 'CA Events: Node View Template One', 'ca_event_node_view_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -559,12 +566,12 @@ function ca_events_views_default_views() {
   );
   $handler->display->display_options['path'] = 'events/rss-feed';
   $handler->display->display_options['displays'] = array(
-    'panel_pane_3' => 'panel_pane_3',
+    'ca_event_list_view_1' => 'ca_event_list_view_1',
     'default' => 0,
-    'panel_pane_1' => 0,
-    'panel_pane_2' => 0,
-    'block_1' => 0,
-    'panel_pane_4' => 0,
+    'ca_event_calendar_view_1' => 0,
+    'ca_event_admin' => 0,
+    'ca_event_block_view_1' => 0,
+    'ca_event_node_view_1' => 0,
   );
   $export['ca_events'] = $view;
 

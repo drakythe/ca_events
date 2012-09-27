@@ -10,7 +10,9 @@
   text-align: center;
 }
 
-.view-ca-video .views-field-field-ca-video-v-video {
+.view-ca-video .views-field-field-ca-video-v-video, #event-images, .view-display-id-ca_event_block_view_1 .views-field-field-ca-events-image, .pane-ca-events-ca-event-node-view-1 {
   float: left;
   padding: 5px 10px;
 }
+
+.pane-node-field-ca-events-date {font-weight: bold;}
