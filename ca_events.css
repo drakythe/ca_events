@@ -1,16 +1,4 @@
-.view-ca-video tr, .view-ca-video tr.even  {
-  background: none repeat scroll 0 0 transparent;
-}
-
-.view-ca-video tr td {
-  width: 25%
-}
-
-.view-ca-video tr td, .view-ca-video tr th {
-  text-align: center;
-}
-
-.view-ca-video .views-field-field-ca-video-v-video, #event-images, .view-display-id-ca_event_block_view_1 .views-field-field-ca-events-image, .pane-ca-events-ca-event-node-view-1 {
+#event-images, .view-display-id-ca_event_block_view_1 .views-field-field-ca-events-image, .pane-ca-events-ca-event-node-view-1 {
   float: left;
   padding: 5px 10px;
 }
