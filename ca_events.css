@@ -1,6 +1,19 @@
-#event-images, .view-display-id-ca_event_block_view_1 .views-field-field-ca-events-image, .pane-ca-events-ca-event-node-view-1 {
+.node-type-ca-event .views-field-field-ca-events-image {
   float: left;
-  padding: 5px 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+.views-field-field-ca-events-image-1 {
+  float: left;
+  clear: left;
+  width: 200px;
+  padding-right: 10px;
+}
+
+.views-field-field-ca-events-image-1 img {
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 
 .pane-node-field-ca-events-date {font-weight: bold;}

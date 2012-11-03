@@ -400,6 +400,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['filters']['field_ca_events_date_value']['expose']['operator'] = 'field_ca_events_date_value_op';
   $handler->display->display_options['filters']['field_ca_events_date_value']['expose']['identifier'] = 'field_ca_events_date_value';
   $handler->display->display_options['pane_title'] = 'CA Events: Admin';
+  $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: CA Events: Upcoming Block */
   $handler = $view->new_display('block', 'CA Events: Upcoming Block', 'ca_event_block_view_1');
