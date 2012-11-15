@@ -1,19 +1,13 @@
-.node-type-ca-event .views-field-field-ca-events-image {
-  float: left;
-  padding-right: 10px;
-  padding-bottom: 5px;
-}
+.node-type-ca-event .views-field-field-ca-events-image, .pane-ca-events-ca-event-list-view-1 .views-field-field-ca-events-image {float: left; padding-right: 10px; padding-bottom: 5px;}
 
-.views-field-field-ca-events-image-1 {
-  float: left;
-  clear: left;
-  width: 200px;
-  padding-right: 10px;
-}
+.views-field-nothing {clear: both;}
 
-.views-field-field-ca-events-image-1 img {
-  padding-right: 5px;
-  padding-bottom: 5px;
-}
+.views-field-field-ca-events-image-1 {float: left; clear: left; width: 200px; padding-right: 10px;}
+
+.views-field-field-ca-events-image-1 img {padding-right: 5px; padding-bottom: 5px;}
 
 .pane-node-field-ca-events-date {font-weight: bold;}
+
+.panel-2col .panel-col-first {min-width: 550px;}
+
+.pane-ca-events-ca-event-node-view-calendar-date {float: left; margin-right: 10px; width: 550px;}
