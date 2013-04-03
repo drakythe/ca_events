@@ -117,6 +117,34 @@ function ca_events_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'middle';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_ca_events_e_categories';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'taxonomy_term_reference_link',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['middle'][2] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'middle';
     $pane->type = 'node_body';
     $pane->subtype = 'node_body';
     $pane->shown = TRUE;
@@ -132,12 +160,12 @@ function ca_events_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = '';
-    $display->content['new-3'] = $pane;
-    $display->panels['middle'][2] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['middle'][3] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'middle';
     $pane->type = 'block';
     $pane->subtype = 'addtoany-addtoany_button';
@@ -156,12 +184,12 @@ function ca_events_default_page_manager_handlers() {
       'css_class' => 'ca-addtoany-feature',
     );
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['middle'][3] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['middle'][4] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'middle';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
@@ -181,10 +209,10 @@ function ca_events_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 5;
     $pane->locks = '';
-    $display->content['new-5'] = $pane;
-    $display->panels['middle'][4] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['middle'][5] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -247,7 +275,7 @@ function ca_events_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'ca_events_node-ca_event_node_view_calendar_date';
@@ -262,10 +290,10 @@ function ca_events_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['left'][0] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['left'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'ca_events_node-ca_event_node_view_1';
@@ -280,10 +308,38 @@ function ca_events_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['right'][0] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['right'][0] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-9';
+    $pane->panel = 'right';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_ca_events_e_categories';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'taxonomy_term_reference_link',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['right'][1] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
     $pane->panel = 'right';
     $pane->type = 'node_body';
     $pane->subtype = 'node_body';
@@ -300,12 +356,12 @@ function ca_events_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = '';
-    $display->content['new-8'] = $pane;
-    $display->panels['right'][1] = 'new-8';
+    $display->content['new-10'] = $pane;
+    $display->panels['right'][2] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-11';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'addtoany-addtoany_button';
@@ -324,12 +380,12 @@ function ca_events_default_page_manager_handlers() {
       'css_class' => 'ca-addtoany-feature',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['right'][2] = 'new-9';
+    $display->content['new-11'] = $pane;
+    $display->panels['right'][3] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-12';
     $pane->panel = 'right';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
@@ -349,14 +405,172 @@ function ca_events_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = '';
-    $display->content['new-10'] = $pane;
-    $display->panels['right'][3] = 'new-10';
+    $display->content['new-12'] = $pane;
+    $display->panels['right'][4] = 'new-12';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['ca_events_node_view_2_panel_context'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'ca_events_term_view_1_panel_context';
+  $handler->task = 'term_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'CA Events: Term Calendar View Template One',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'vids' => array(
+              1 => '1',
+            ),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_events_term_template',
+          'settings' => array(
+            'ca_events_term_template' => 'ca_events_term_template_one',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-13';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_events_term-ca_event_term_view_calendar_date';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'argument_term_1',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-13'] = $pane;
+    $display->panels['center'][0] = 'new-13';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['ca_events_term_view_1_panel_context'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'ca_events_term_view_2_panel_context';
+  $handler->task = 'term_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'CA Events: Term List View Template One',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-event-term-template-2',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'vids' => array(
+              1 => '1',
+            ),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_events_term_template',
+          'settings' => array(
+            'ca_events_term_template' => 'ca_events_term_template_two',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Events';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-14';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_events_term-ca_event_term_view_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-14'] = $pane;
+    $display->panels['middle'][0] = 'new-14';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-14';
+  $handler->conf['display'] = $display;
+  $export['ca_events_term_view_2_panel_context'] = $handler;
 
   return $export;
 }
@@ -632,7 +846,7 @@ function ca_events_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 1;
   $handler->conf = array(
-    'title' => 'CA Events List View Template Two',
+    'title' => 'CA Events: List View Template One',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -651,6 +865,8 @@ function ca_events_default_page_manager_pages() {
       ),
       'logic' => 'and',
     ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
