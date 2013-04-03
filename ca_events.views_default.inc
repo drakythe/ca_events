@@ -236,14 +236,6 @@ function ca_events_views_default_views() {
     'ca_event' => 'ca_event',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Date -  start date (field_ca_events_date) */
-  $handler->display->display_options['filters']['field_ca_events_date_value']['id'] = 'field_ca_events_date_value';
-  $handler->display->display_options['filters']['field_ca_events_date_value']['table'] = 'field_data_field_ca_events_date';
-  $handler->display->display_options['filters']['field_ca_events_date_value']['field'] = 'field_ca_events_date_value';
-  $handler->display->display_options['filters']['field_ca_events_date_value']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_ca_events_date_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_ca_events_date_value']['granularity'] = 'minute';
-  $handler->display->display_options['filters']['field_ca_events_date_value']['default_date'] = 'now';
 
   /* Display: CA Events: Admin */
   $handler = $view->new_display('panel_pane', 'CA Events: Admin', 'ca_event_admin');
@@ -550,7 +542,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '700',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
