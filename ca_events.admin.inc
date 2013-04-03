@@ -45,6 +45,17 @@ function ca_events_settings_form() {
     '#required' => TRUE,
     '#description' => t('How many eventss would you like displayed in the block?'),
   );
+  $form['ca_events_term_display'] = array(
+    '#type' => 'select',
+    '#title' => t('Event\'s term display test'),
+    '#options' => array(
+      'ca_events_term_display_false' => t('False'),
+      'ca_events_term_display_node' => t('Display on the Node only'),
+      'ca_events_term_display_all' => t('Display Everywhere'),
+    ),
+    '#required' => TRUE,
+    '#default_value' => variable_get('ca_events_term_display', 'ca_events_term_display_node'),
+  );
   $form['ca_events_list_template'] = array(
     '#type' => 'select',
     '#title' => t('Events\'s list template'),
@@ -66,6 +77,17 @@ function ca_events_settings_form() {
     ),
     '#required' => TRUE,
     '#default_value' => variable_get('ca_events_node_template', 'ca_events_node_template_one'),
+  );
+  $form['ca_events_term_template'] = array(
+    '#type' => 'select',
+    '#title' => t('Events\'s term template'),
+    '#options' => array(
+      'ca_events_term_template_one' => t('Template one'),
+      'ca_events_term_template_two' => t('Template two'),
+      'ca_events_term_template_three' => t('Template three'),
+    ),
+    '#required' => TRUE,
+    '#default_value' => variable_get('ca_events_term_template', 'ca_events_term_template_one'),
   );
   $form['actions'] = array(
     '#type' => 'actions',
