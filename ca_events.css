@@ -15,3 +15,5 @@
 .ca-event-node-template-2 .panel-2col .panel-col-last {float: left; width: 390px;}
 
 .pane-ca-events-ca-event-node-view-calendar-date {float: left; margin-right: 10px; width: 550px;}
+
+.node-type-ca-event .field-name-field-ca-events-e-categories .field-item {display: inline; margin: 0 5px;}
