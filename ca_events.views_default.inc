@@ -377,6 +377,7 @@ function ca_events_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['link_display'] = 'ca_event_feed';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -473,6 +474,8 @@ function ca_events_views_default_views() {
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'ca_events_categories';
   $handler->display->display_options['pane_title'] = 'CA Events: Calendar View Template One';
   $handler->display->display_options['pane_description'] = 'Full Calendar';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: CA Events: List View Template One */
@@ -603,6 +606,8 @@ function ca_events_views_default_views() {
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'ca_events_categories';
   $handler->display->display_options['pane_title'] = 'CA Events: List View Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: Events RSS Feed */
@@ -612,6 +617,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'rss';
   $handler->display->display_options['row_plugin'] = 'node_rss';
+  $handler->display->display_options['row_options']['item_length'] = 'rss';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -755,6 +761,8 @@ function ca_events_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['pane_title'] = 'CA Events: Node View Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
 
   /* Display: CA Events: Node View Calendar Date Field */
   $handler = $view->new_display('panel_pane', 'CA Events: Node View Calendar Date Field', 'ca_event_node_view_calendar_date');
@@ -794,6 +802,8 @@ function ca_events_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['pane_title'] = 'CA Events: Node View Calendar Date Field';
+  $handler->display->display_options['pane_category']['name'] = 'CA Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $export['ca_events_node'] = $view;
 
   $view = new view();
@@ -809,6 +819,7 @@ function ca_events_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['link_display'] = 'feed_1';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -895,6 +906,8 @@ function ca_events_views_default_views() {
   );
   $handler->display->display_options['fields']['field_ca_events_date']['delta_offset'] = '0';
   $handler->display->display_options['pane_title'] = 'CA Events: Term View Calendar Date Field';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
     'tid' => array(
       'type' => 'context',
@@ -959,7 +972,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -972,7 +985,24 @@ function ca_events_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['pane_title'] = 'CA Events: Term View Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: Feed */
+  $handler = $view->new_display('feed', 'Feed', 'feed_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '25';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['row_plugin'] = 'node_rss';
+  $handler->display->display_options['path'] = 'categories/%/feed';
+  $handler->display->display_options['displays'] = array(
+    'ca_event_term_view_calendar_date' => 'ca_event_term_view_calendar_date',
+    'ca_event_term_view_1' => 'ca_event_term_view_1',
+    'default' => 0,
+  );
   $export['ca_events_term'] = $view;
 
   return $export;
