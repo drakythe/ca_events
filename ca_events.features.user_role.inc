@@ -13,7 +13,7 @@ function ca_events_user_default_roles() {
   // Exported role: event admin.
   $roles['event admin'] = array(
     'name' => 'event admin',
-    'weight' => '4',
+    'weight' => 4,
     'machine_name' => '',
   );
 

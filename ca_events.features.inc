@@ -22,7 +22,7 @@ function ca_events_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function ca_events_views_api() {
-  return array("version" => "3.0");
+  return array("api" => "3.0");
 }
 
 /**
