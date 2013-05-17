@@ -610,6 +610,141 @@ function ca_events_views_default_views() {
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
 
+  /* Display: CA Events: List View Template Two */
+  $handler = $view->new_display('panel_pane', 'CA Events: List View Template Two', 'ca_event_list_view_2');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Date */
+  $handler->display->display_options['fields']['field_ca_events_date']['id'] = 'field_ca_events_date';
+  $handler->display->display_options['fields']['field_ca_events_date']['table'] = 'field_data_field_ca_events_date';
+  $handler->display->display_options['fields']['field_ca_events_date']['field'] = 'field_ca_events_date';
+  $handler->display->display_options['fields']['field_ca_events_date']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_events_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_events_date']['element_type'] = 'h4';
+  $handler->display->display_options['fields']['field_ca_events_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_events_date']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  $handler->display->display_options['fields']['field_ca_events_date']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_ca_events_date']['delta_first_last'] = TRUE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[title] [field_ca_events_date]';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_ca_events_image']['id'] = 'field_ca_events_image';
+  $handler->display->display_options['fields']['field_ca_events_image']['table'] = 'field_data_field_ca_events_image';
+  $handler->display->display_options['fields']['field_ca_events_image']['field'] = 'field_ca_events_image';
+  $handler->display->display_options['fields']['field_ca_events_image']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_events_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_events_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ca_events_image']['settings'] = array(
+    'image_style' => 'default',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_ca_events_image']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ca_events_image']['delta_offset'] = '0';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '600';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '700',
+  );
+  /* Field: Content: AddToAny link */
+  $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
+  $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['label'] = '';
+  $handler->display->display_options['fields']['addtoany_link']['element_class'] = 'ca-addtoany-feature';
+  $handler->display->display_options['fields']['addtoany_link']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Date -  start date (field_ca_events_date) */
+  $handler->display->display_options['sorts']['field_ca_events_date_value']['id'] = 'field_ca_events_date_value';
+  $handler->display->display_options['sorts']['field_ca_events_date_value']['table'] = 'field_data_field_ca_events_date';
+  $handler->display->display_options['sorts']['field_ca_events_date_value']['field'] = 'field_ca_events_date_value';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ca_event' => 'ca_event',
+  );
+  /* Filter criterion: Content: Date -  start date (field_ca_events_date) */
+  $handler->display->display_options['filters']['field_ca_events_date_value']['id'] = 'field_ca_events_date_value';
+  $handler->display->display_options['filters']['field_ca_events_date_value']['table'] = 'field_data_field_ca_events_date';
+  $handler->display->display_options['filters']['field_ca_events_date_value']['field'] = 'field_ca_events_date_value';
+  $handler->display->display_options['filters']['field_ca_events_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_ca_events_date_value']['granularity'] = 'minute';
+  $handler->display->display_options['filters']['field_ca_events_date_value']['default_date'] = 'now';
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
+  $handler->display->display_options['filters']['tid']['expose']['label'] = 'Categories';
+  $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
+  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
+  $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    256820458 => 0,
+    13007701 => 0,
+  );
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'ca_events_categories';
+  $handler->display->display_options['pane_title'] = 'CA Events: List View Template Two';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
   /* Display: Events RSS Feed */
   $handler = $view->new_display('feed', 'Events RSS Feed', 'ca_event_feed');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -638,6 +773,7 @@ function ca_events_views_default_views() {
   $handler->display->display_options['displays'] = array(
     'ca_event_calendar_view_1' => 'ca_event_calendar_view_1',
     'ca_event_list_view_1' => 'ca_event_list_view_1',
+    'ca_event_list_view_2' => 'ca_event_list_view_2',
     'default' => 0,
   );
   $export['ca_events_list'] = $view;
