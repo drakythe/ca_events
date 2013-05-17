@@ -182,7 +182,7 @@ function ca_events_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'event/image',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '10 MB',
       'max_resolution' => '1000x1000',
